@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane fx:controller="dicePicker.Controller"
+          xmlns:fx="http://javafx.com/fxml/1"
+          xmlns="http://javafx.com/javafx/8.0.92"
+          alignment="CENTER" hgap="10" vgap="10" styleClass="root">
+    <padding><Insets bottom="25" left="25" right="25" top="25" /></padding>
+
+    <Text id="welcome-text" text="Welcome"
+          GridPane.columnIndex="0" GridPane.rowIndex="0"
+          GridPane.columnSpan="2"/>
+
+    <Label text="Pick a die:"
+           GridPane.columnIndex="0" GridPane.rowIndex="1" />
+
+    <ChoiceBox fx:id="dieChoiceBox"
+               GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+    <HBox spacing="10" alignment="CENTER"
+          GridPane.columnIndex="0" GridPane.rowIndex="3" GridPane.columnSpan="2">
+        <Button text="Roll"
+                onAction="#handleRollButtonAction"/>
+    </HBox>
+
+    <Text fx:id="actiontarget" textAlignment="CENTER"
+          GridPane.columnIndex="0" GridPane.rowIndex="4" GridPane.columnSpan="2"/>
+
+    <TextField fx:id="pickles" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+    <Button text="Click here" GridPane.columnIndex="1" GridPane.rowIndex="5"
+                onAction="#handlePickleButtonAction"/>
+    <Text fx:id="pickletarget" textAlignment="CENTER"
+        GridPane.columnIndex="0" GridPane.rowIndex="6" GridPane.columnSpan="2"/>
+
+
+
+</GridPane>
